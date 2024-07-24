@@ -1,7 +1,7 @@
 import type { IconType } from "react-icons/lib";
 
 import OldPortfolioUrl from "assets/projects/old-portfolio.png?url";
-import SpotifyNext13Url from "assets/projects/spotify_next13.png?url";
+import PixeletteTechnologies from "assets/projects/pixelettetechnologies.png?url";
 import TheLabzUrl from "assets/projects/the-labz.jpg?url";
 import TwitterCloneUrl from "assets/projects/twitter-clone.png?url";
 import AirtableIcon from "icons/AirtableIcon";
@@ -75,6 +75,16 @@ const typeGraphqlTech: ProjectTech = { tech: "TypeGraphQL", icon: GraphqlIcon };
 
 export const projects: Project[] = [
   {
+    title: "Pixelette Technologies",
+    description:
+      "I am trying to build Spotify with basic features.\n Basically, I build it because I want to check Next.js 13 app directory and master GraphQL with TypeGraphQL. Currently, you will find here only sign-in and sign-up functionality.",
+    image: PixeletteTechnologies,
+    url: "https://pixelette-technologies.vercel.app/",
+    githubUrl: "https://github.com/QamarShehzad100/pixelette-technologies",
+    techs: [typeScriptTech, tailwindCssTech, reactTech],
+    isPinned: true
+  },
+  {
     title: "Twitter Clone",
     description:
       "As in the title, it is the Twitter clone 😄\n Responsive website with basic features.",
@@ -110,16 +120,6 @@ export const projects: Project[] = [
       storybookTech,
       styledComponentsTech
     ],
-    isPinned: true
-  },
-  {
-    title: "Spotify Next.js 13",
-    description:
-      "I am trying to build Spotify with basic features.\n Basically, I build it because I want to check Next.js 13 app directory and master GraphQL with TypeGraphQL. Currently, you will find here only sign-in and sign-up functionality.",
-    image: SpotifyNext13Url,
-    url: "https://spotify-nextjs13-graphql-tailwindcss.vercel.app/login",
-    githubUrl: "https://github.com/adrianpiatek99/spotify-nextjs13-graphql-tailwindcss",
-    techs: [nextjsTech, typeScriptTech, graphqlTech, typeGraphqlTech, prismaTech, tailwindCssTech],
     isPinned: true
   },
   {
