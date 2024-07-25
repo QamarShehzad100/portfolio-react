@@ -123,7 +123,7 @@ export const DefaultAboutMeSection = () => {
       <div className="flex flex-col gap-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row">
         <div className="animate-hidden flex flex-col w-full gap-[30px] max-w-[650px]">
           <Typography tag="p" weight="semibold" className="text-primary text-xl sm:text-2xl">
-            React Developer
+            React Developer | Frontend Developer
           </Typography>
           <Typography tag="p" className="text-color2 text-l sm:text-xl whitespace-pre-line">
             {`Hi, I'm Qamar Shehzad, a React Developer with one year of experience in creating dynamic, responsive web applications. Proficient in JavaScript, HTML, CSS, React, Redux Toolkit, GSAP, and Framer Motion, I specialize in writing clean, efficient, and maintainable code.
