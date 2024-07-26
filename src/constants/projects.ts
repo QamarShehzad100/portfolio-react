@@ -1,9 +1,11 @@
 import type { IconType } from "react-icons/lib";
 
+import CodeWeb from "assets/projects/codeWeb.png?url";
 import OldPortfolioUrl from "assets/projects/old-portfolio.png?url";
 import PixeletteTechnologies from "assets/projects/pixelettetechnologies.png?url";
 import TheLabzUrl from "assets/projects/the-labz.jpg?url";
 import TwitterCloneUrl from "assets/projects/twitter-clone.png?url";
+import WildOasis from "assets/projects/wildoasis.png?url";
 import AirtableIcon from "icons/AirtableIcon";
 import AwsIcon from "icons/AwsIcon";
 import BuildIcon from "icons/BuildIcon";
@@ -82,6 +84,25 @@ export const projects: Project[] = [
     url: "https://pixelette-technologies.vercel.app/",
     githubUrl: "https://github.com/QamarShehzad100/pixelette-technologies",
     techs: [typeScriptTech, tailwindCssTech, reactTech],
+    isPinned: true
+  },
+  {
+    title: "Code Web",
+    description: "It solutions website",
+    image: CodeWeb,
+    url: "https://code-web-cyan.vercel.app/",
+    githubUrl: "https://github.com/QamarShehzad100/code-web",
+    techs: [typeScriptTech, tailwindCssTech, reactTech],
+    isPinned: true
+  },
+  {
+    title: "The Wild Oasis",
+    description:
+      "The wild Oasis is the dashboard for the hotels giving stats for hotel rooms and cabins ",
+    image: WildOasis,
+    url: "https://the-wild-oasis-eight-eta.vercel.app",
+    githubUrl: "https://github.com/QamarShehzad100/The-Wild-Oasis",
+    techs: [typeScriptTech, tailwindCssTech, reactTech, styledComponentsTech],
     isPinned: true
   },
   {
