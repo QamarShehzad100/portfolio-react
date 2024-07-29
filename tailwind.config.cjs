@@ -16,7 +16,7 @@ module.exports = {
       color1: "#edebe8",
       color2: "#999999",
       gray: "#cccccc",
-      primary: "#4615b2",
+      primary: "#F08000",
       border1: "#333333"
     },
     fontSize: {
@@ -33,7 +33,7 @@ module.exports = {
       "7xl": ["64px", "71px"]
     },
     fontFamily: {
-      primary: ["-apple-system", "BlinkMacSystemFont", "Inter", "Helvetica", "Arial", "sans-serif"]
+      primary: ["Roboto", "Poppins", "popins", "Helvetica", "Arial", "sans-serif"]
     },
     extend: {
       zIndex: {

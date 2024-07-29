@@ -47,29 +47,9 @@ export const skills: {
       text: "React.js"
     },
     {
-      src: svelteIcon,
-      website: "https://svelte.dev",
-      text: "Svelte"
-    },
-    {
       src: typescriptIcon,
       website: "https://www.typescriptlang.org",
       text: "TypeScript"
-    },
-    {
-      src: prismaIcon,
-      website: "https://www.prisma.io",
-      text: "Prisma"
-    },
-    {
-      src: trpcIcon,
-      website: "https://trpc.io",
-      text: "tRPC"
-    },
-    {
-      src: graphqlIcon,
-      website: "https://graphql.org",
-      text: "GraphQL"
     },
     {
       src: reduxIcon,

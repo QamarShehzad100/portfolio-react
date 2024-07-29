@@ -1,31 +1,22 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaCss3Alt, FaGithub, FaHtml5, FaJsSquare, FaNodeJs, FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import { IconButton, Typography } from "components/core";
 import { GITHUB_URL } from "constants/links";
-import { motion } from "framer-motion";
-import { gsap } from "gsap";
 import GithubIcon from "icons/GithubIcon";
 import { Section } from "shared/Section";
 
-// Define motion variants for icon animation
-const iconVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 }
-};
-
 // Function to generate a random position for icons
-const getRandomPosition = (width, height) => ({
+const getRandomPosition = (width: number, height: number) => ({
   x: Math.random() * (width - 50),
   y: Math.random() * (height - 50)
 });
 
 // Function to ensure no overlapping between icons
-const getUniqueRandomPositions = (numIcons, width, height) => {
-  const positions = [];
-  const minDistance = 150; // Increased minimum distance between icons
+const getUniqueRandomPositions = (numIcons: number, width: number, height: number) => {
+  const positions: { x: number; y: number }[] = [];
+  const minDistance = 150;
 
   while (positions.length < numIcons) {
     const { x, y } = getRandomPosition(width, height);
@@ -48,19 +39,26 @@ const getUniqueRandomPositions = (numIcons, width, height) => {
   return positions;
 };
 
-export const DefaultAboutMeSection = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const containerRef = useRef(null);
-  const [positions, setPositions] = useState([]);
+export const DefaultAboutMeSection: React.FC = () => {
+  const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // Handle mouse movement and update mousePosition state
-  const handleMouseMove = (e) => {
+  // Handle mouse movement and update icon positions
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
-    const { offsetLeft, offsetTop } = e.currentTarget;
+    const container = containerRef.current;
 
-    setMousePosition({
-      x: clientX - offsetLeft,
-      y: clientY - offsetTop
+    if (!container) return;
+
+    const { offsetLeft, offsetTop } = container;
+    const x = clientX - offsetLeft;
+    const y = clientY - offsetTop;
+
+    container.querySelectorAll(".icon").forEach((icon) => {
+      const dx = (x - icon.getBoundingClientRect().left) * 0.1;
+      const dy = (y - icon.getBoundingClientRect().top) * 0.1;
+
+      (icon as HTMLElement).style.transform = `translate(${dx}px, ${dy}px)`;
     });
   };
 
@@ -75,12 +73,6 @@ export const DefaultAboutMeSection = () => {
       const newPositions = getUniqueRandomPositions(6, width, height);
 
       setPositions(newPositions);
-
-      gsap.utils.toArray(".icon").forEach((icon, index) => {
-        const { x, y } = newPositions[index];
-
-        gsap.set(icon, { x, y });
-      });
     };
 
     updateIconsPosition();
@@ -88,32 +80,6 @@ export const DefaultAboutMeSection = () => {
 
     return () => window.removeEventListener("resize", updateIconsPosition);
   }, []);
-
-  // Update icon positions based on mouse movement
-  useEffect(() => {
-    const handleMouseMoveAnimation = () => {
-      const { x, y } = mousePosition;
-
-      gsap.to(".icon", {
-        x: (index, target) => {
-          // Increase the multiplier for smoother motion
-          const dx = (x - target.offsetLeft) * 0.8;
-
-          return Math.max(Math.min(dx, 120), -120); // Limit movement to avoid overlap
-        },
-        y: (index, target) => {
-          // Increase the multiplier for smoother motion
-          const dy = (y - target.offsetTop) * 1;
-
-          return Math.max(Math.min(dy, 120), -120); // Limit movement to avoid overlap
-        },
-        stagger: 10,
-        ease: "power3.out"
-      });
-    };
-
-    handleMouseMoveAnimation();
-  }, [mousePosition]);
 
   // Array of icon components to display
   const icons = [FaReact, FaGithub, FaNodeJs, FaJsSquare, FaCss3Alt, FaHtml5];
@@ -123,7 +89,7 @@ export const DefaultAboutMeSection = () => {
       <div className="flex flex-col gap-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row">
         <div className="animate-hidden flex flex-col w-full gap-[30px] max-w-[650px]">
           <Typography tag="p" weight="semibold" className="text-primary text-xl sm:text-2xl">
-            React Developer | Frontend Developer
+            Frontend Developer | React Developer
           </Typography>
           <Typography tag="p" className="text-color2 text-l sm:text-xl whitespace-pre-line">
             {`Hi, I'm Qamar Shehzad, a React Developer with one year of experience in creating dynamic, responsive web applications. Proficient in JavaScript, HTML, CSS, React, Redux Toolkit, GSAP, and Framer Motion, I specialize in writing clean, efficient, and maintainable code.
@@ -142,25 +108,23 @@ export const DefaultAboutMeSection = () => {
         </div>
         <div
           className="relative flex justify-center items-center w-full h-[500px] overflow-hidden"
-          id="about-me"
           ref={containerRef}
           onMouseMove={handleMouseMove}
         >
           {/* Animated Icons Section */}
           {icons.map((Icon, index) => (
-            <motion.div
+            <div
               key={index}
               className="absolute icon"
-              variants={iconVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
               style={{
-                fontSize: `${Math.random() * 80 + 50}px`
+                top: `${positions[index]?.y}px`,
+                left: `${positions[index]?.x}px`,
+                fontSize: `${Math.random() * 28 + 45}px`,
+                transition: "transform 0.1s ease-out"
               }}
             >
               <Icon />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
