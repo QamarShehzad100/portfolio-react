@@ -13,7 +13,7 @@ const experiences: ExperienceItem[] = [
     position: "React Developer",
     time: "Jul 2024 - Present",
     description:
-      "As a Frontend Developer, you specialize in crafting interactive and visually engaging user interfaces for web applications. Utilizing React, Tailwind CSS, JavaScript, and Redux Toolkit, you translate design concepts into dynamic, responsive web pages. You also leverage libraries such as Material-UI and Ant Design to enhance and streamline your UI components. Your role involves optimizing performance to ensure smooth interactions and integrating APIs to connect frontend and backend systems. Collaborating closely with UX/UI designers, you ensure that your interfaces meet design specifications and function seamlessly across devices and browsers. Additionally, you troubleshoot issues and enhance features based on user feedback, maintaining high standards of quality and usability."
+      "As a Frontend Developer, I specialize in crafting interactive and visually engaging user interfaces for web applications. Utilizing React, Tailwind CSS, JavaScript, and Redux Toolkit, I translate design concepts into dynamic, responsive web pages. I also leverage libraries such as Material-UI and Ant Design to enhance and streamline my UI components. My role involves optimizing performance to ensure smooth interactions and integrating APIs to connect frontend and backend systems. Collaborating closely with UX/UI designers, I ensure that my interfaces meet design specifications and function seamlessly across devices and browsers. Additionally, I troubleshoot issues and enhance features based on user feedback, maintaining high standards of quality and usability."
   },
   {
     company: "KeepCoders",
