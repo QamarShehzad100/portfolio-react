@@ -69,9 +69,7 @@ export const HeaderMobileMenu = ({ isOpen, onClose, isPinned }: HeaderMobileMenu
                     elementId="experience"
                     textAlign="left"
                     className="w-full"
-                  >
-                    Experience
-                  </ButtonScrollTo>
+                  ></ButtonScrollTo>
                 </li>
                 <li className="w-full [&>button]:w-full">
                   <ButtonScrollTo
