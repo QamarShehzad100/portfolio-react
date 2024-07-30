@@ -79,21 +79,22 @@ export const projects: Project[] = [
   {
     title: "Pixelette Technologies",
     description:
-      "I am trying to build Spotify with basic features.\n Basically, I build it because I want to check Next.js 13 app directory and master GraphQL with TypeGraphQL. Currently, you will find here only sign-in and sign-up functionality.",
+      "Discover Pixelette Technologies' Global Impact From our beginnings in 2018, Pixelette Technologies has rapidly become a world leader in software development, specialising in AI and blockchain technologies.",
     image: PixeletteTechnologies,
     url: "https://pixelette-technologies.vercel.app/",
     githubUrl: "https://github.com/QamarShehzad100/pixelette-technologies",
-    techs: [typeScriptTech, tailwindCssTech, reactTech],
-    isPinned: true
+    techs: [reactTech],
+    isPinned: false
   },
   {
     title: "Code Web",
-    description: "It solutions website",
+    description:
+      "Welcome to Web an IT, where innovation meets excellence. With a passion for technology and a commitment to quality, we deliver cutting-edge web solutions tailored to your needs.",
     image: CodeWeb,
     url: "https://code-web-cyan.vercel.app/",
     githubUrl: "https://github.com/QamarShehzad100/code-web",
-    techs: [typeScriptTech, tailwindCssTech, reactTech],
-    isPinned: true
+    techs: [tailwindCssTech, reactTech],
+    isPinned: false
   },
   {
     title: "The Wild Oasis",
@@ -102,8 +103,8 @@ export const projects: Project[] = [
     image: WildOasis,
     url: "https://the-wild-oasis-eight-eta.vercel.app",
     githubUrl: "https://github.com/QamarShehzad100/The-Wild-Oasis",
-    techs: [typeScriptTech, tailwindCssTech, reactTech, styledComponentsTech],
-    isPinned: true
+    techs: [tailwindCssTech, reactTech, styledComponentsTech],
+    isPinned: false
   },
   {
     title: "Twitter Clone",
@@ -112,16 +113,8 @@ export const projects: Project[] = [
     image: TwitterCloneUrl,
     url: "https://twitter-clone-nextjs-coral.vercel.app",
     githubUrl: "https://github.com/adrianpiatek99/twitter-clone-nextjs",
-    techs: [
-      nextjsTech,
-      typeScriptTech,
-      trpcTech,
-      prismaTech,
-      testTech,
-      styledComponentsTech,
-      tanStackQueryTech
-    ],
-    isPinned: true
+    techs: [nextjsTech, typeScriptTech, styledComponentsTech],
+    isPinned: false
   },
   {
     title: "The Labz",
@@ -129,26 +122,7 @@ export const projects: Project[] = [
       "The project that I have been working in my previous job.\n The Labz platform gives creatives a robust multi-media toolbox from which they can mix and match audio, video, text, links, images, video chat, and more to curate a unique and dynamic experiences.",
     image: TheLabzUrl,
     url: "https://www.thelabz.com",
-    techs: [
-      nextjsTech,
-      typeScriptTech,
-      awsTech,
-      airtableTech,
-      prismaTech,
-      craftjsTech,
-      reduxTech,
-      testTech,
-      storybookTech,
-      styledComponentsTech
-    ],
-    isPinned: true
-  },
-  {
-    title: "Old portfolio",
-    description: "Old portfolio that contains old projects.",
-    image: OldPortfolioUrl,
-    url: "https://portfolio-adrian-piatek.vercel.app",
-    githubUrl: "https://github.com/adrianpiatek99/portfolio-nextjs",
-    techs: [reactTech, typeScriptTech, styledComponentsTech]
+    techs: [typeScriptTech, reduxTech, styledComponentsTech],
+    isPinned: false
   }
 ];

@@ -17,7 +17,7 @@ export const handleCreateRippleEffect = (e: MouseEvent<HTMLElement>, color?: str
     circle.style.width = `${rippleSize}px`;
     circle.style.height = `${rippleSize}px`;
     circle.style.backgroundColor = color ?? "customColor";
-    circle.style.left = center ? "" : `${x - rippleSize / 2}px`;
+    circle.style.left = center ? "" : `${x - rippleSize / 8}px`;
     circle.style.top = center ? "" : `${y - rippleSize / 2}px`;
     circle.classList.add("ripple");
 

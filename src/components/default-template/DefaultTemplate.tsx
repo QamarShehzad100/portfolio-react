@@ -3,6 +3,7 @@ import { Header } from "shared/Header";
 
 import { DefaultAboutMeSection } from "./DefaultAboutMeSection";
 import { DefaultContactSection } from "./DefaultContactSection";
+import { DefaultExperienceSection } from "./DefaultExperienceSection";
 import { DefaultProjectsSection } from "./DefaultProjectsSection";
 import { DefaultSkillsSection } from "./DefaultSkillsSection";
 
@@ -15,6 +16,7 @@ export const DefaultTemplate = () => {
         <DefaultAboutMeSection />
         <DefaultSkillsSection />
         <DefaultProjectsSection />
+        <DefaultExperienceSection />
         <DefaultContactSection />
       </div>
       <Footer />

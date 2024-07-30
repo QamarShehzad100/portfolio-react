@@ -58,9 +58,10 @@ export const Header = () => {
             <Logo />
           </div>
           <div className="hidden sm:flex sm:align-center sm:gap-[4px] sm:mx-auto">
-            <ButtonScrollTo elementId="about-me">About me</ButtonScrollTo>
+            <ButtonScrollTo elementId="about-me">About</ButtonScrollTo>
             <ButtonScrollTo elementId="skills">Skills</ButtonScrollTo>
             <ButtonScrollTo elementId="projects">Projects</ButtonScrollTo>
+            <ButtonScrollTo elementId="experience">Experience</ButtonScrollTo>
             <ButtonScrollTo elementId="contact">Contact</ButtonScrollTo>
           </div>
           <div className="flex sm:hidden">

@@ -37,11 +37,6 @@ export const skills: {
 } = {
   experiencedWith: [
     {
-      src: nextjsIcon,
-      website: "https://nextjs.org",
-      text: "Next.js"
-    },
-    {
       src: reactIcon,
       website: "https://reactjs.org",
       text: "React.js"
@@ -56,16 +51,12 @@ export const skills: {
       website: "https://redux-toolkit.js.org",
       text: "Redux Toolkit"
     },
-    {
-      src: storybookIcon,
-      website: "https://storybook.js.org",
-      text: "Storybook"
-    },
-    {
-      src: reactQueryIcon,
-      website: "https://tanstack.com/query/latest",
-      text: "React Query"
-    },
+
+    // {
+    //   src: reactQueryIcon,
+    //   website: "https://tanstack.com/query/latest",
+    //   text: "React Query"
+    // },
     {
       src: reactHookFormIcon,
       website: "https://react-hook-form.com",
@@ -100,44 +91,49 @@ export const skills: {
       src: viteIcon,
       website: "https://vitejs.dev",
       text: "Vite"
-    },
-    {
-      src: jestIcon,
-      website: "https://jestjs.io",
-      text: "Jest"
-    },
-    {
-      src: reactTestingLibraryIcon,
-      website: "https://testing-library.com/docs/react-testing-library/intro/",
-      text: "RTL"
-    },
-    {
-      src: mswIcon,
-      website: "https://mswjs.io",
-      text: "msw"
-    },
-    {
-      src: zodIcon,
-      website: "https://zod.dev",
-      text: "Zod ❤️"
-    },
-    {
-      src: yupIcon,
-      website: "https://github.com/jquense/yup",
-      text: "Yup"
-    },
-    {
-      src: zustandIcon,
-      website: "https://zustand-demo.pmnd.rs",
-      text: "Zustand ❤️"
-    },
-    {
-      src: gatsbyIcon,
-      website: "https://www.gatsbyjs.com",
-      text: "Gatsby"
     }
+    // {
+    //   src: jestIcon,
+    //   website: "https://jestjs.io",
+    //   text: "Jest"
+    // },
+    // {
+    //   src: reactTestingLibraryIcon,
+    //   website: "https://testing-library.com/docs/react-testing-library/intro/",
+    //   text: "RTL"
+    // },
+    // {
+    //   src: mswIcon,
+    //   website: "https://mswjs.io",
+    //   text: "msw"
+    // },
+    // {
+    //   src: zodIcon,
+    //   website: "https://zod.dev",
+    //   text: "Zod ❤️"
+    // },
+    // {
+    //   src: yupIcon,
+    //   website: "https://github.com/jquense/yup",
+    //   text: "Yup"
+    // },
+    // {
+    //   src: zustandIcon,
+    //   website: "https://zustand-demo.pmnd.rs",
+    //   text: "Zustand ❤️"
+    // },
+    // {
+    //   src: gatsbyIcon,
+    //   website: "https://www.gatsbyjs.com",
+    //   text: "Gatsby"
+    // }
   ],
   wantToLearn: [
+    {
+      src: nextjsIcon,
+      website: "https://nextjs.org",
+      text: "Next.js"
+    },
     {
       src: reactIcon,
       website: "https://reactnative.dev",
@@ -147,11 +143,11 @@ export const skills: {
       src: cypressIcon,
       website: "https://www.cypress.io",
       text: "Cypress"
-    },
-    {
-      src: playwrightIcon,
-      website: "https://playwright.dev",
-      text: "Playwright"
     }
+    // {
+    //   src: playwrightIcon,
+    //   website: "https://playwright.dev",
+    //   text: "Playwright"
+    // }
   ]
 };

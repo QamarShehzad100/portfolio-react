@@ -92,7 +92,7 @@ export const DefaultAboutMeSection: React.FC = () => {
             Frontend Developer | React Developer
           </Typography>
           <Typography tag="p" className="text-color2 text-l sm:text-xl whitespace-pre-line">
-            {`Hi, I'm Qamar Shehzad, a React Developer with one year of experience in creating dynamic, responsive web applications. Proficient in JavaScript, HTML, CSS, React, Redux Toolkit, GSAP, and Framer Motion, I specialize in writing clean, efficient, and maintainable code.
+            {`Hi, I'm Qamar Shehzad, a React Developer with an year of experience in creating dynamic, responsive web applications. Proficient in JavaScript, HTML, CSS, React, Redux Toolkit, GSAP, and Framer Motion, I specialize in writing clean, efficient, and maintainable code.
 
           I collaborate well with cross-functional teams to develop user-friendly interfaces that enhance user experiences and drive business growth. As a strong communicator and problem-solver, I'm always ready to tackle new challenges and find innovative solutions.
 
