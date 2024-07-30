@@ -40,7 +40,7 @@ export const HeaderMobileMenu = ({ isOpen, onClose, isPinned }: HeaderMobileMenu
                     textAlign="left"
                     className="w-full"
                   >
-                    About me
+                    About
                   </ButtonScrollTo>
                 </li>
                 <li className="w-full [&>button]:w-full">
