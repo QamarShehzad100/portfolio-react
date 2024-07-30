@@ -20,7 +20,7 @@ const experiences: ExperienceItem[] = [
     position: "MERN Internship",
     time: "Feb 2024 - Jul 2024",
     description:
-      "During your MERN (MongoDB, Express.js, React, Node.js) internship, you gained hands-on experience with full-stack development, with a primary focus on frontend technologies. Your role involved working extensively on the frontend components of web applications, using React to build dynamic user interfaces. You also gained exposure to backend development, contributing to API design and data management with MongoDB and Express.js. Throughout the internship, you were involved in various stages of the development lifecycle, enhancing both your frontend skills and understanding of full-stack integration."
+      "During my MERN (MongoDB, Express.js, React, Node.js) internship, I gained hands-on experience with full-stack development, with a primary focus on frontend technologies. My role involved working extensively on the frontend components of web applications, using React to build dynamic user interfaces. I also gained exposure to backend development, contributing to API design and data management with MongoDB and Express.js. Throughout the internship, I was involved in various stages of the development lifecycle, enhancing both my frontend skills and understanding of full-stack integration."
   }
   // Add more experience items as needed
 ];
