@@ -62,7 +62,7 @@ export const DefaultAboutMeSection: React.FC = () => {
     const tl = gsap.timeline({ repeat: -1, yoyo: true }); // Creating a GSAP timeline
 
     if (imgRef.current) {
-      tl.to(imgRef.current, { rotation: 270, duration: 10, ease: "power1.inOut" }) // Adjust duration to slow down the rotation
+      tl.to(imgRef.current, { rotation: 170, duration: 10, ease: "power1.inOut" }) // Adjust duration to slow down the rotation
         .to(imgRef.current, { rotation: 0, duration: 10, ease: "power1.inOut" }); // Adjust duration to slow down the rotation
     }
   }, []);
