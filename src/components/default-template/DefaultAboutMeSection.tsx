@@ -4,14 +4,9 @@ import { Link } from "react-router-dom";
 
 import { IconButton, Typography } from "components/core";
 import { GITHUB_URL } from "constants/links";
+import { gsap } from "gsap"; // Import GSAP
 import GithubIcon from "icons/GithubIcon";
 import { Section } from "shared/Section";
-
-// Function to generate a random position for icons
-const getRandomPosition = (width: number, height: number) => ({
-  x: Math.random() * (width - 50),
-  y: Math.random() * (height - 50)
-});
 
 // Function to ensure no overlapping between icons
 const getUniqueRandomPositions = (numIcons: number, width: number, height: number) => {
@@ -19,7 +14,8 @@ const getUniqueRandomPositions = (numIcons: number, width: number, height: numbe
   const minDistance = 150;
 
   while (positions.length < numIcons) {
-    const { x, y } = getRandomPosition(width, height);
+    const x = Math.random() * (width - 50);
+    const y = Math.random() * (height - 50);
     let overlap = false;
 
     for (const pos of positions) {
@@ -41,31 +37,12 @@ const getUniqueRandomPositions = (numIcons: number, width: number, height: numbe
 
 export const DefaultAboutMeSection: React.FC = () => {
   const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  // Handle mouse movement and update icon positions
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { clientX, clientY } = e;
-    const container = containerRef.current;
-
-    if (!container) return;
-
-    const { offsetLeft, offsetTop } = container;
-    const x = clientX - offsetLeft;
-    const y = clientY - offsetTop;
-
-    container.querySelectorAll(".icon").forEach((icon) => {
-      const dx = (x - icon.getBoundingClientRect().left) * 0.1;
-      const dy = (y - icon.getBoundingClientRect().top) * 0.1;
-
-      (icon as HTMLElement).style.transform = `translate(${dx}px, ${dy}px)`;
-    });
-  };
+  const imgRef = useRef<HTMLImageElement>(null); // Create a reference for the image
 
   // Update initial position of icons when the component mounts or window resizes
   useEffect(() => {
     const updateIconsPosition = () => {
-      const container = containerRef.current;
+      const container = document.querySelector(".relative");
 
       if (!container) return;
 
@@ -80,9 +57,15 @@ export const DefaultAboutMeSection: React.FC = () => {
 
     return () => window.removeEventListener("resize", updateIconsPosition);
   }, []);
+  // Adding rotation animations for the illustration
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, yoyo: true }); // Creating a GSAP timeline
 
-  // Array of icon components to display
-  const icons = [FaReact, FaGithub, FaNodeJs, FaJsSquare, FaCss3Alt, FaHtml5];
+    if (imgRef.current) {
+      tl.to(imgRef.current, { rotation: 270, duration: 10, ease: "power1.inOut" }) // Adjust duration to slow down the rotation
+        .to(imgRef.current, { rotation: 0, duration: 10, ease: "power1.inOut" }); // Adjust duration to slow down the rotation
+    }
+  }, []);
 
   return (
     <Section id="about-me" headingText="Qamar Shehzad">
@@ -106,26 +89,13 @@ export const DefaultAboutMeSection: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div
-          className="relative flex justify-center items-center w-full h-[500px] overflow-hidden"
-          ref={containerRef}
-          onMouseMove={handleMouseMove}
-        >
-          {/* Animated Icons Section */}
-          {icons.map((Icon, index) => (
-            <div
-              key={index}
-              className="absolute icon"
-              style={{
-                top: `${positions[index]?.y}px`,
-                left: `${positions[index]?.x}px`,
-                fontSize: `${Math.random() * 28 + 45}px`,
-                transition: "transform 0.1s ease-out"
-              }}
-            >
-              <Icon />
-            </div>
-          ))}
+        <div className="relative flex justify-center items-center w-full h-[500px] overflow-hidden">
+          <img
+            ref={imgRef} // Assign the reference to the image
+            src="src/assets/sections/portfolio-illustration.png"
+            alt=""
+            style={{ width: 400, height: 400 }}
+          />
         </div>
       </div>
     </Section>
