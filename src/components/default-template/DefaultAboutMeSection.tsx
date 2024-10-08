@@ -92,7 +92,7 @@ export const DefaultAboutMeSection: React.FC = () => {
         <div className="relative flex justify-center items-center w-full h-[500px] overflow-hidden">
           <img
             ref={imgRef} // Assign the reference to the image
-            src="src/assets/sections/portfolio-illustration.png"
+            src="public\portfolio-illustration.png"
             alt=""
             style={{ width: 400, height: 400 }}
           />
