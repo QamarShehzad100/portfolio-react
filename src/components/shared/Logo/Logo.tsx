@@ -11,7 +11,8 @@ export const Logo = () => {
       className="text-color1 font-bold text-2xl sm:text-3xl duration-200 sm:hover:text-primary focus-visible:text-primary"
       onClick={scrollToTop}
     >
-      <span>Portfolio</span>
+      {/* Logo goes inside span */}
+      <span></span>
     </button>
   );
 };

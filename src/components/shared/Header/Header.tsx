@@ -48,7 +48,7 @@ export const Header = () => {
         className={`h-[50px] duration-200 ${isPinned && "bg-background2/75 backdrop-blur-md "}`}
       />
       <header
-        className={`sticky top-[-1px] right-0 left-0 w-full z-50 duration-200 after:content-[''] after:absolute after:left-[50%] after:bottom-0 after:w-full after:translate-x-[-50%] after:h-px after:bg-border1 after:duration-200 ${
+        className={`sticky top-[-1px] right-0 left-0 w-full z-50 duration-200 after:content-[''] after:absolute after:left-[50%] after:bottom-0 after:w-full after:translate-x-[-50%] after:h-px after:duration-200 ${
           isPinned ? "bg-background2/75 backdrop-blur-md after:scale-x-100" : "after:scale-x-0"
         }`}
         ref={headerRef}

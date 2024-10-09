@@ -8,6 +8,7 @@ import GithubIcon from "icons/GithubIcon";
 import { Section } from "shared/Section";
 
 import illustationImg from "../../../public/portfolio-illustration.png";
+import DefaultTypingAnimation from "./DefaultProjectsSection/DefaultTypingAnimation";
 
 // Function to ensure no overlapping between icons
 const getUniqueRandomPositions = (numIcons: number, width: number, height: number) => {
@@ -69,18 +70,25 @@ export const DefaultAboutMeSection: React.FC = () => {
   }, []);
 
   return (
-    <Section id="about-me" headingText="Qamar Shehzad">
+    <Section id="about-me" headingText="">
+      <div className="font-bold text-6xl">
+        {/* typing component */}
+        <DefaultTypingAnimation />
+      </div>
       <div className="flex flex-col gap-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row">
         <div className="animate-hidden flex flex-col w-full gap-[30px] max-w-[650px]">
-          <Typography tag="p" weight="semibold" className="text-primary text-xl sm:text-2xl">
-            Frontend Developer | React Developer
-          </Typography>
+          <Typography
+            tag="p"
+            weight="semibold"
+            className="text-primary text-xl sm:text-2xl"
+          ></Typography>
           <Typography tag="p" className="text-color2 text-l sm:text-xl whitespace-pre-line">
-            {`Hi, I'm Qamar Shehzad, a React Developer with an year of experience in creating dynamic, responsive web applications. Proficient in JavaScript, HTML, CSS, React, Redux Toolkit, GSAP, and Framer Motion, I specialize in writing clean, efficient, and maintainable code.
+            {`React Developer specializing in building dynamic, responsive web applications with expertise in JavaScript, HTML, CSS, React, and Redux Toolkit. I focus on crafting clean, efficient, and scalable code, ensuring seamless user experiences across all devices. Proficient in GSAP and Framer Motion, I bring animations to life, enhancing the visual appeal of web applications.
 
-          I collaborate well with cross-functional teams to develop user-friendly interfaces that enhance user experiences and drive business growth. As a strong communicator and problem-solver, I'm always ready to tackle new challenges and find innovative solutions.
+I excel at collaborating with cross-functional teams to create intuitive, user-friendly interfaces that align with business goals. As a problem-solver, I enjoy tackling complex challenges and delivering innovative solutions. Passionate about continuous learning, I stay current with the latest technologies and industry best practices.
 
-          Dedicated to continuous learning, I stay current with industry trends and best practices. Let's connect and bring your ideas to life with cutting-edge web applications.`}
+Let’s connect to bring your ideas to life with high-performance, cutting-edge web applications!
+`}
           </Typography>
           <div className="flex gap-[12px]">
             <Link to={GITHUB_URL} target="_blank" rel="noopener noreferrer" tabIndex={-1}>

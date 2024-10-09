@@ -16,8 +16,17 @@ module.exports = {
       color1: "#edebe8",
       color2: "#999999",
       gray: "#cccccc",
-      primary: "#F08000",
+      primary: "#FFBF00",
       border1: "#333333"
+    },
+    keyframes: {
+      blink: {
+        "0%, 100%": { opacity: "1" },
+        "50%": { opacity: "0" }
+      }
+    },
+    animation: {
+      blink: "blink 1s step-end infinite"
     },
     fontSize: {
       xs: ["12px", "15px"],
@@ -36,18 +45,27 @@ module.exports = {
       primary: ["Roboto", "Poppins", "popins", "Helvetica", "Arial", "sans-serif"]
     },
     extend: {
+      keyframes: {
+        typing: {
+          "0%": { width: "0ch" },
+          "100%": { width: "3ch" } // Adjust width based on text length
+        }
+      },
+      animation: {
+        typing: "typing 1s steps(0) forwards" // Duration and steps
+      },
       zIndex: {
         1: "1",
         2: "2",
         3: "3",
         4: "4",
         5: "5"
-      },
-      backgroundImage: {
-        "gradient-radial":
-          "radial-gradient(circle at center, #cccccc35 1px, transparent 0), radial-gradient(circle at center, #cccccc35 1px, transparent 0)",
-        "linear-gradient": "linear-gradient(0deg, #060606 0%, transparent 65%)"
       }
+      // backgroundImage: {
+      //   "gradient-radial":
+      //     "radial-gradient(circle at center, gray 1px, transparent 0), radial-gradient(circle at center, #cccccc35 1px, transparent 0)",
+      //   "linear-gradient": "linear-gradient(0deg, #060606 0%, transparent 65%)"
+      // }
     }
   },
   plugins: []

@@ -22,7 +22,7 @@ export const ButtonScrollTo = forwardRef(
         element.scrollIntoView({ behavior: "smooth" });
       }
 
-      handleCreateRippleEffect(e, "#4615b2");
+      handleCreateRippleEffect(e, "teal");
       props.onClick?.(e);
     };
 
@@ -32,7 +32,7 @@ export const ButtonScrollTo = forwardRef(
         className={`relative flex items-center w-max ${
           textAlign === "center" ? "justify-center" : "justify-start"
         } h-[36px] px-4 rounded-md
-        font-medium select-none overflow-hidden duration-200 text-m will-change-transform hover:bg-primary/50 focus-visible:bg-primary/40 focus-visible:shadow-[inset_0px_0px_0px_2px_theme('colors.primary')]`}
+        font-medium select-none overflow-hidden duration-200 text-m will-change-transform hover:text-primary focus-visible:bg-primary/40 focus-visible:shadow-[inset_0px_0px_0px_2px_theme('colors.primary')]`}
         onClick={handleClick}
         ref={ref}
       >

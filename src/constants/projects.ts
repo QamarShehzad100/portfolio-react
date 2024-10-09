@@ -1,7 +1,6 @@
 import type { IconType } from "react-icons/lib";
 
 import CodeWeb from "assets/projects/codeWeb.png?url";
-import OldPortfolioUrl from "assets/projects/old-portfolio.png?url";
 import PixeletteTechnologies from "assets/projects/pixelettetechnologies.png?url";
 import TheLabzUrl from "assets/projects/the-labz.jpg?url";
 import TwitterCloneUrl from "assets/projects/twitter-clone.png?url";
