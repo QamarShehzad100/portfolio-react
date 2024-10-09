@@ -16,7 +16,7 @@ module.exports = {
       color1: "#edebe8",
       color2: "#999999",
       gray: "#cccccc",
-      primary: "#FFBF00",
+      primary: "#F08000",
       border1: "#333333"
     },
     keyframes: {
