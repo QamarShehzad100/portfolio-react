@@ -71,11 +71,11 @@ export const DefaultAboutMeSection: React.FC = () => {
 
   return (
     <Section id="about-me" headingText="">
-      <div className="font-bold text-6xl">
+      <div className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-6xl">
         {/* typing component */}
         <DefaultTypingAnimation />
       </div>
-      <div className="flex flex-col gap-5 sm:flex sm:flex-col md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row">
+      <div className="flex flex-col sm:gap-5 md:gap-16 lg:gap-36 xl:gap-36 sm:flex sm:flex-col md:flex md:flex-row  md:justify-center lg:flex lg:flex-row xl:flex xl:flex-row">
         <div className="animate-hidden flex flex-col w-full gap-[30px] max-w-[650px]">
           <Typography
             tag="p"
@@ -100,10 +100,10 @@ Let’s connect to bring your ideas to life with high-performance, cutting-edge 
         </div>
         <div className="relative flex justify-center items-center w-full h-[500px] overflow-hidden">
           <img
+            className=" w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 "
             ref={imgRef} // Assign the reference to the image
             src={illustationImg}
-            alt=""
-            style={{ width: 400, height: 400 }}
+            alt="animation-image"
           />
         </div>
       </div>
