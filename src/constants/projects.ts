@@ -86,16 +86,6 @@ export const projects: Project[] = [
     isPinned: false
   },
   {
-    title: "Code Web",
-    description:
-      "Welcome to Web an IT, where innovation meets excellence. With a passion for technology and a commitment to quality, we deliver cutting-edge web solutions tailored to your needs.",
-    image: CodeWeb,
-    url: "https://code-web-cyan.vercel.app/",
-    githubUrl: "https://github.com/QamarShehzad100/code-web",
-    techs: [tailwindCssTech, reactTech],
-    isPinned: false
-  },
-  {
     title: "The Wild Oasis",
     description:
       "The wild Oasis is the dashboard for the hotels giving stats for hotel rooms and cabins ",
@@ -122,6 +112,16 @@ export const projects: Project[] = [
     image: TheLabzUrl,
     url: "https://www.thelabz.com",
     techs: [typeScriptTech, reduxTech, styledComponentsTech],
+    isPinned: false
+  },
+  {
+    title: "Code Web",
+    description:
+      "Welcome to Web an IT, where innovation meets excellence. With a passion for technology and a commitment to quality, we deliver cutting-edge web solutions tailored to your needs.",
+    image: CodeWeb,
+    url: "https://code-web-cyan.vercel.app/",
+    githubUrl: "https://github.com/QamarShehzad100/code-web",
+    techs: [tailwindCssTech, reactTech],
     isPinned: false
   }
 ];
