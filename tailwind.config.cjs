@@ -11,22 +11,13 @@ module.exports = {
     },
     colors: {
       current: "currentColor",
-      background1: "#060606",
-      background2: "#0c0c0e",
+      background1: "#111827",
+      background2: "#18212F",
       color1: "#edebe8",
       color2: "#999999",
       gray: "#cccccc",
       primary: "#F08000",
       border1: "#333333"
-    },
-    keyframes: {
-      blink: {
-        "0%, 100%": { opacity: "1" },
-        "50%": { opacity: "0" }
-      }
-    },
-    animation: {
-      blink: "blink 1s step-end infinite"
     },
     fontSize: {
       xs: ["12px", "15px"],
@@ -42,16 +33,26 @@ module.exports = {
       "7xl": ["64px", "71px"]
     },
     fontFamily: {
-      primary: ["Roboto", "Poppins", "popins", "Helvetica", "Arial", "sans-serif"]
+      primary: ["Roboto", "Poppins", "Helvetica", "Arial", "sans-serif"]
     },
     extend: {
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
+        },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" }
+        },
         typing: {
           "0%": { width: "0ch" },
           "100%": { width: "3ch" } // Adjust width based on text length
         }
       },
       animation: {
+        fadeIn: "fadeIn 0.5s ease forwards",
+        blink: "blink 1s step-end infinite",
         typing: "typing 1s steps(0) forwards" // Duration and steps
       },
       zIndex: {
@@ -61,11 +62,6 @@ module.exports = {
         4: "4",
         5: "5"
       }
-      // backgroundImage: {
-      //   "gradient-radial":
-      //     "radial-gradient(circle at center, gray 1px, transparent 0), radial-gradient(circle at center, #cccccc35 1px, transparent 0)",
-      //   "linear-gradient": "linear-gradient(0deg, #060606 0%, transparent 65%)"
-      // }
     }
   },
   plugins: []
